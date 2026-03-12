@@ -2,7 +2,7 @@
 
 ## Overview
 
-Build a Typst package that accurately reproduces MISQ's formatting requirements so authors can submit manuscripts without using LaTeX. The work proceeds in four phases: establish the formatting foundation, build the document structure, implement APA 7th citations, then assemble the complete package with a working sample document.
+Build a Typst package that accurately reproduces MISQ's formatting requirements so authors can submit manuscripts without using LaTeX. The work proceeds in five phases: establish the formatting foundation, build the document structure, implement APA 7th citations, assemble the complete package with a working sample document, then create a publish script for Typst Universe submission.
 
 ## Phases
 
@@ -16,6 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Structure** - Title page, heading styles, and page flow
 - [ ] **Phase 3: Citations** - APA 7th bibliography from .bib file
 - [ ] **Phase 4: Package** - Sample document, manifest, and release artifacts
+- [ ] **Phase 5: Deployment** - Publish script for Typst Universe submission
 
 ## Phase Details
 
@@ -66,10 +67,21 @@ Plans:
   5. `misq.typ` includes inline comments explaining key formatting decisions (spacing values, heading rules, font fallbacks)
 **Plans**: TBD
 
+### Phase 5: Deployment
+**Goal**: A self-contained publish script that packages the template for Typst Universe submission — sparse-clones a `typst/packages` fork, copies versioned files into the correct directory structure, generates a thumbnail, and commits on a release branch ready for a PR. The script should be easily copyable into other Typst package projects.
+**Depends on**: Phase 4
+**Requirements**: DEPLOY-01, DEPLOY-02, DEPLOY-03, DEPLOY-04
+**Success Criteria** (what must be TRUE):
+  1. Running the publish script from the project root creates a correctly structured `packages/preview/{name}/{version}/` directory in a local packages fork
+  2. The script uses sparse checkout (not a full clone of the massive typst/packages repo)
+  3. A `thumbnail.png` exists at the project root, generated from the first page of the template at >= 1080px
+  4. The script is portable — changing the package name and username at the top is sufficient to reuse it in another Typst project
+**Plans**: TBD
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -77,3 +89,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Structure | 0/TBD | Not started | - |
 | 3. Citations | 0/TBD | Not started | - |
 | 4. Package | 0/TBD | Not started | - |
+| 5. Deployment | 0/TBD | Not started | - |

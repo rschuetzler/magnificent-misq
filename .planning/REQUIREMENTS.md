@@ -52,12 +52,18 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PACK-06**: Example document includes figure and table examples with captions
 - [ ] **PACK-07**: Template file includes inline comments explaining formatting decisions
 
+### Deployment
+
+- [ ] **DEPLOY-01**: A publish script that copies package files to a local `typst/packages` fork, creates a versioned branch, and commits — ready for a PR
+- [ ] **DEPLOY-02**: The publish script uses sparse checkout to avoid cloning the full `typst/packages` repo
+- [ ] **DEPLOY-03**: The publish script is self-contained and copyable into other Typst package projects with minimal config changes
+- [ ] **DEPLOY-04**: A `thumbnail.png` is generated from the template (first page, >= 1080px longer edge, <= 3 MiB)
+
 ## v2 Requirements
 
 ### Enhancements
 
 - **ENH-01**: Cross-reference examples in sample document (`@label` syntax)
-- **ENH-02**: Package registry publication to Typst Universe
 
 ## Out of Scope
 
@@ -103,10 +109,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PACK-05 | Phase 4 | Pending |
 | PACK-06 | Phase 4 | Pending |
 | PACK-07 | Phase 4 | Pending |
+| DEPLOY-01 | Phase 5 | Pending |
+| DEPLOY-02 | Phase 5 | Pending |
+| DEPLOY-03 | Phase 5 | Pending |
+| DEPLOY-04 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 27 total
-- Mapped to phases: 27
+- v1 requirements: 31 total
+- Mapped to phases: 31
 - Unmapped: 0
 
 ---
