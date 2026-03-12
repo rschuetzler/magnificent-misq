@@ -28,7 +28,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Body text renders as 12pt Times New Roman (confirmed in PDF, not just fallback font)
   3. Body paragraphs are visually double-spaced and abstract text is visually 1.5x-spaced
   4. References and figure/table regions are single-spaced when the scoped spacing blocks are applied
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 01-01-PLAN.md — Create misq.typ with page geometry, font, spacing; scaffold template directory
 
 ### Phase 2: Structure
 **Goal**: Complete document structure — page 1 with bold title, abstract, and keywords; three heading levels correctly styled; Introduction starting on page 2; plain page numbers.
@@ -71,7 +73,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/1 | Planning complete | - |
 | 2. Structure | 0/TBD | Not started | - |
 | 3. Citations | 0/TBD | Not started | - |
 | 4. Package | 0/TBD | Not started | - |
