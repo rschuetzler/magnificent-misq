@@ -9,17 +9,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Page Layout
 
-- [ ] **PAGE-01**: Document uses US Letter page size
-- [ ] **PAGE-02**: Side margins are 1 inch, top margin ~0.5 inch (accounting for header space), bottom margin yields 9-inch text height
+- [x] **PAGE-01**: Document uses US Letter page size
+- [x] **PAGE-02**: Side margins are 1 inch, top margin ~0.5 inch (accounting for header space), bottom margin yields 9-inch text height
 - [ ] **PAGE-03**: Page numbers appear in plain footer (centered, bottom)
 
 ### Typography
 
-- [ ] **TYPO-01**: Body text is 12pt Times New Roman
-- [ ] **TYPO-02**: Body text is double-spaced (matching LaTeX `\baselinestretch{2.0}`)
-- [ ] **TYPO-03**: Abstract text is 1.5-spaced (matching LaTeX `\baselinestretch{1.5}`)
-- [ ] **TYPO-04**: References section text is single-spaced
-- [ ] **TYPO-05**: Text in figures and tables is single-spaced
+- [x] **TYPO-01**: Body text is 12pt Times New Roman
+- [x] **TYPO-02**: Body text is double-spaced (matching LaTeX `\baselinestretch{2.0}`)
+- [x] **TYPO-03**: Abstract text is 1.5-spaced (matching LaTeX `\baselinestretch{1.5}`)
+- [x] **TYPO-04**: References section text is single-spaced
+- [x] **TYPO-05**: Text in figures and tables is single-spaced
 - [ ] **TYPO-06**: References have 0.5-inch left hanging indent
 
 ### Headings
@@ -76,14 +76,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PAGE-01 | Phase 1 | Pending |
-| PAGE-02 | Phase 1 | Pending |
+| PAGE-01 | Phase 1 | Complete |
+| PAGE-02 | Phase 1 | Complete |
 | PAGE-03 | Phase 2 | Pending |
-| TYPO-01 | Phase 1 | Pending |
-| TYPO-02 | Phase 1 | Pending |
-| TYPO-03 | Phase 1 | Pending |
-| TYPO-04 | Phase 1 | Pending |
-| TYPO-05 | Phase 1 | Pending |
+| TYPO-01 | Phase 1 | Complete |
+| TYPO-02 | Phase 1 | Complete |
+| TYPO-03 | Phase 1 | Complete |
+| TYPO-04 | Phase 1 | Complete |
+| TYPO-05 | Phase 1 | Complete |
 | TYPO-06 | Phase 3 | Pending |
 | HEAD-01 | Phase 2 | Pending |
 | HEAD-02 | Phase 2 | Pending |
