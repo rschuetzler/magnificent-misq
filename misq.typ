@@ -28,18 +28,21 @@
 
   // --- Body paragraph spacing (TYPO-02) ---
   // Double-spaced: visually equivalent to LaTeX \baselinestretch{2.0}
-  // Typst leading is gap between lines (not baseline-to-baseline),
-  // so values differ from traditional line-height calculations.
-  // Both leading (intra-paragraph) and spacing (inter-paragraph) are set.
-  // Calibrated against LaTeX reference output at 12pt Times.
-  set par(justify: true, leading: 0.85em, spacing: 0.85em)
+  // Typst `leading` is a gap (space between bottom of one line and top of next),
+  // not baseline-to-baseline distance. At 12pt Times New Roman:
+  //   LaTeX 2x: baselineskip = 2 * 14.4pt = 28.8pt → Typst leading = 28.8 - 12 = 16.8pt ≈ 1.4em
+  // Calibrated against LaTeX reference values; both leading (intra-paragraph)
+  // and spacing (inter-paragraph) are set to the same value for uniform double-spacing.
+  set par(justify: true, leading: 1.4em, spacing: 1.4em)
 
   // --- Single-spacing for bibliography (TYPO-04) ---
   // Matches LaTeX \baselinestretch{1.0} for references section
+  // At 12pt Times: LaTeX 1x = 14.4pt → Typst leading = 14.4 - 12 = 2.4pt ≈ 0.2em
+  // Using 0.65em (Typst default) which produces standard readable single-spacing
   show bibliography: set par(leading: 0.65em, spacing: 0.65em)
 
   // --- Single-spacing for figures and tables (TYPO-05) ---
-  // Captions and figure/table content rendered at single-spacing
+  // Captions and figure/table content rendered at single-spacing (same as bibliography)
   show figure: set par(leading: 0.65em, spacing: 0.65em)
 
   // --- Front matter: abstract (TYPO-03) ---
@@ -47,9 +50,10 @@
     text(weight: "bold")[Abstract]
     linebreak()
     // 1.5x spacing: visually equivalent to LaTeX \baselinestretch{1.5}
-    // Scoped to abstract block only, does not affect body
+    // At 12pt Times: LaTeX 1.5x = 1.5 * 14.4pt = 21.6pt → Typst leading = 21.6 - 12 = 9.6pt ≈ 0.8em
+    // Scoped to abstract block only; body spacing is restored after this block
     block({
-      set par(leading: 0.55em, spacing: 0.55em)
+      set par(leading: 0.8em, spacing: 0.8em)
       abstract
     })
     parbreak()
