@@ -76,39 +76,39 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PAGE-01 | — | Pending |
-| PAGE-02 | — | Pending |
-| PAGE-03 | — | Pending |
-| TYPO-01 | — | Pending |
-| TYPO-02 | — | Pending |
-| TYPO-03 | — | Pending |
-| TYPO-04 | — | Pending |
-| TYPO-05 | — | Pending |
-| TYPO-06 | — | Pending |
-| HEAD-01 | — | Pending |
-| HEAD-02 | — | Pending |
-| HEAD-03 | — | Pending |
-| HEAD-04 | — | Pending |
-| STRC-01 | — | Pending |
-| STRC-02 | — | Pending |
-| STRC-03 | — | Pending |
-| STRC-04 | — | Pending |
-| CITE-01 | — | Pending |
-| CITE-02 | — | Pending |
-| CITE-03 | — | Pending |
-| PACK-01 | — | Pending |
-| PACK-02 | — | Pending |
-| PACK-03 | — | Pending |
-| PACK-04 | — | Pending |
-| PACK-05 | — | Pending |
-| PACK-06 | — | Pending |
-| PACK-07 | — | Pending |
+| PAGE-01 | Phase 1 | Pending |
+| PAGE-02 | Phase 1 | Pending |
+| PAGE-03 | Phase 2 | Pending |
+| TYPO-01 | Phase 1 | Pending |
+| TYPO-02 | Phase 1 | Pending |
+| TYPO-03 | Phase 1 | Pending |
+| TYPO-04 | Phase 1 | Pending |
+| TYPO-05 | Phase 1 | Pending |
+| TYPO-06 | Phase 3 | Pending |
+| HEAD-01 | Phase 2 | Pending |
+| HEAD-02 | Phase 2 | Pending |
+| HEAD-03 | Phase 2 | Pending |
+| HEAD-04 | Phase 2 | Pending |
+| STRC-01 | Phase 2 | Pending |
+| STRC-02 | Phase 2 | Pending |
+| STRC-03 | Phase 2 | Pending |
+| STRC-04 | Phase 2 | Pending |
+| CITE-01 | Phase 3 | Pending |
+| CITE-02 | Phase 3 | Pending |
+| CITE-03 | Phase 3 | Pending |
+| PACK-01 | Phase 4 | Pending |
+| PACK-02 | Phase 4 | Pending |
+| PACK-03 | Phase 4 | Pending |
+| PACK-04 | Phase 4 | Pending |
+| PACK-05 | Phase 4 | Pending |
+| PACK-06 | Phase 4 | Pending |
+| PACK-07 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 27 total
-- Mapped to phases: 0
-- Unmapped: 27 ⚠️
+- Mapped to phases: 27
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after initial definition*
+*Last updated: 2026-03-12 after roadmap creation*
