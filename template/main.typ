@@ -1,6 +1,6 @@
 // template/main.typ — Test document for misq.typ
 // Exercises: title page, abstract, keywords, page break, heading levels, body spacing,
-//            figures, tables, bibliography, paragraph-style indent mode
+//            figures, tables, bibliography, appendix, paragraph-style indent mode
 
 #import "../misq.typ": misq
 
@@ -33,18 +33,33 @@ evaluating the line spacing calibration. The spacing between lines within this
 paragraph (leading) and between this paragraph and the previous one (spacing) should
 both appear consistent with standard double-spacing.
 
-== Background and Motivation
+= Literature Review
 
-This is a level 2 heading (centered, bold, numbered 1.1). The body text continues
+This section reviews prior work relevant to the study. It should also appear at
+double line spacing consistent with the MISQ formatting requirements.
+
+== Theoretical Background
+
+This is a level 2 heading (centered, bold, numbered 2.1). The body text continues
 with standard double-spacing. This subsection demonstrates the second-level heading
 style which should be centered and bold, matching the MISQ style guide.
 
-=== Prior Work
+=== Key Constructs
 
-This is a level 3 heading (left-aligned, bold, numbered 1.1.1). Level 3 headings
+This is a level 3 heading (left-aligned, bold, numbered 2.1.1). Level 3 headings
 follow left alignment. This subsubsection demonstrates the third-level heading style.
+The body text here continues the standard double-spaced formatting.
 
-= Sample Figure
+== Prior Research
+
+This is a second level-2 heading within the Literature Review section (numbered 2.2).
+This helps verify that the numbering sequence works correctly across multiple
+subsections within a given section.
+
+= Methodology
+
+This section describes the research methodology. The figure and table below test
+the single-spacing show rules from Phase 1.
 
 The following figure uses a rectangle placeholder to test figure single-spacing:
 
@@ -56,8 +71,6 @@ The following figure uses a rectangle placeholder to test figure single-spacing:
     The figure content itself is also rendered at single spacing.
   ]
 )
-
-= Sample Table
 
 The following table tests table single-spacing:
 
@@ -89,3 +102,15 @@ visual contrast with the single-spaced bibliography that follows.
 #align(center, text(weight: "bold")[REFERENCES])
 
 #bibliography("references.bib", style: "apa", title: none)
+
+#pagebreak()
+
+#align(center, text(weight: "bold", size: 12pt)[APPENDIX])
+
+This appendix contains supplementary materials for the test document. The appendix
+heading above should appear centered and bold, on its own page, separated from the
+references by a page break. This demonstrates the author-managed appendix approach
+per the MISQ template design decisions.
+
+Authors may include multiple appendices by repeating this pattern with distinct
+headings such as "APPENDIX A" and "APPENDIX B" as needed for their manuscript.
