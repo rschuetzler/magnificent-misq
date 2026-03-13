@@ -101,4 +101,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Structure | 2/2 | Complete   | 2026-03-13 |
 | 3. Citations | 0/1 | Not started | - |
 | 4. Package | 3/3 | Complete   | 2026-03-13 |
-| 5. Deployment | 2/2 | Complete   | 2026-03-13 |
+| 5. Deployment | 3/3 | Complete   | 2026-03-13 |
