@@ -52,8 +52,59 @@
 
   // --- Heading numbering (HEAD-04) ---
   // Hierarchical numbering pattern: "1", "1.1", "1.1.1"
-  // "1.1." produces correct output at all levels without trailing period on display
-  set heading(numbering: "1.1.")
+  // Using "1.1" (no trailing dot) to avoid trailing period on level-1 display ("1." → "1")
+  set heading(numbering: "1.1")
+
+  // --- Heading show rules (HEAD-01, HEAD-02, HEAD-03) ---
+  // All levels: bold, 12pt, uniform spacing above/below
+  // IMPORTANT: counter(heading).display(it.numbering) reconstructs the number
+  // because full transformational show rules bypass default heading number rendering.
+  // See RESEARCH.md Pitfall 1.
+
+  // Level 1: centered, uppercase, bold, 12pt, numbered (1, 2, 3, ...)
+  show heading.where(level: 1): it => block(
+    above: 1.4em,
+    below: 0.8em,
+    {
+      set align(center)
+      set text(weight: "bold", size: 12pt)
+      if it.numbering != none {
+        counter(heading).display(it.numbering)
+        [ ]
+      }
+      upper(it.body)
+    }
+  )
+
+  // Level 2: centered, bold, 12pt, numbered (1.1, 1.2, ...) — no uppercase
+  show heading.where(level: 2): it => block(
+    above: 1.4em,
+    below: 0.8em,
+    {
+      set align(center)
+      set text(weight: "bold", size: 12pt)
+      if it.numbering != none {
+        counter(heading).display(it.numbering)
+        [ ]
+      }
+      it.body
+    }
+  )
+
+  // Level 3: left-aligned, bold, 12pt, numbered (1.1.1, 1.1.2, ...)
+  show heading.where(level: 3): it => block(
+    above: 1.4em,
+    below: 0.8em,
+    {
+      set align(left)
+      set text(weight: "bold", size: 12pt)
+      if it.numbering != none {
+        counter(heading).display(it.numbering)
+        [ ]
+      }
+      it.body
+    }
+  )
 
   // --- Front matter: title page (STRC-01) ---
   // Title: bold and centered, original author casing (no auto-uppercase)
