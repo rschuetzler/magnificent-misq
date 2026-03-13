@@ -66,8 +66,7 @@ Each task was committed atomically:
 
 1. **Task 1: Create Makefile with publish automation** - `c653a97` (feat)
 2. **Task 2: Generate thumbnail.png (+ --root fix)** - `4b43b9e` (feat)
-
-**Plan metadata:** (pending — after checkpoint approval)
+3. **Task 3: Verify Makefile and thumbnail (checkpoint:human-verify)** - Approved by user 2026-03-13
 
 ## Files Created/Modified
 
@@ -103,13 +102,13 @@ None beyond the --root fix documented above.
 
 ## User Setup Required
 
-None - Task 3 (checkpoint:human-verify) requires user to visually confirm thumbnail and Makefile structure before proceeding.
+None - all automation complete.
 
 ## Next Phase Readiness
 
-- Makefile and thumbnail.png are committed and ready
-- User should run `make` to confirm help output, open thumbnail.png to verify template appearance
-- After checkpoint approval, plan 05-02 is complete — remaining task is plan 05-03 (run `make publish` with actual fork)
+- Makefile and thumbnail.png are committed and verified by user
+- Plan 05-02 is complete — Phase 5 deployment is fully done
+- To publish: run `make publish` with a typst-packages fork configured, then open the printed PR URL to submit
 
 ---
 *Phase: 05-deployment*
