@@ -16,7 +16,7 @@ Working APA 7th citations from a `.bib` file using a bundled CSL, with the refer
 ### CSL source
 - Bundle `new-apa.csl` from the ambivalent-amcis project (proven to work with Typst)
 - Place CSL file at project root alongside `misq.typ` — part of the package, not a template resource
-- Copy the file from ambivalent-amcis; do not modify it
+- Copy the file from ambivalent-amcis with one required modification: change `hanging-indent="true"` to `hanging-indent="false"` on line 2107 (required for Typst hanging indent show rule to function — see GitHub issue #2639)
 
 ### Citation style application
 - Auto-apply the bundled CSL via a show rule in `misq.typ` so authors don't need to specify `style:`
