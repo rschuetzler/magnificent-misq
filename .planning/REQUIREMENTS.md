@@ -20,7 +20,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **TYPO-03**: Abstract text is 1.5-spaced (matching LaTeX `\baselinestretch{1.5}`)
 - [x] **TYPO-04**: References section text is single-spaced
 - [x] **TYPO-05**: Text in figures and tables is single-spaced
-- [ ] **TYPO-06**: References have 0.5-inch left hanging indent
+- [x] **TYPO-06**: References have 0.5-inch left hanging indent
 
 ### Headings
 
@@ -38,9 +38,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Citations
 
-- [ ] **CITE-01**: APA 7th edition in-text citations work via `@key` syntax
-- [ ] **CITE-02**: Bibliography renders from .bib file with APA 7th formatting
-- [ ] **CITE-03**: Bundled APA 7th CSL file for precise citation formatting
+- [x] **CITE-01**: APA 7th edition in-text citations work via `@key` syntax
+- [x] **CITE-02**: Bibliography renders from .bib file with APA 7th formatting
+- [x] **CITE-03**: Bundled APA 7th CSL file for precise citation formatting
 
 ### Package
 
@@ -90,7 +90,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TYPO-03 | Phase 1 | Complete |
 | TYPO-04 | Phase 1 | Complete |
 | TYPO-05 | Phase 1 | Complete |
-| TYPO-06 | Phase 3 | Pending |
+| TYPO-06 | Phase 3 | Complete |
 | HEAD-01 | Phase 2 | Complete |
 | HEAD-02 | Phase 2 | Complete |
 | HEAD-03 | Phase 2 | Complete |
@@ -99,9 +99,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | STRC-02 | Phase 2 | Complete |
 | STRC-03 | Phase 2 | Complete |
 | STRC-04 | Phase 2 | Complete |
-| CITE-01 | Phase 3 | Pending |
-| CITE-02 | Phase 3 | Pending |
-| CITE-03 | Phase 3 | Pending |
+| CITE-01 | Phase 3 | Complete |
+| CITE-02 | Phase 3 | Complete |
+| CITE-03 | Phase 3 | Complete |
 | PACK-01 | Phase 4 | Pending |
 | PACK-02 | Phase 4 | Pending |
 | PACK-03 | Phase 4 | Pending |
