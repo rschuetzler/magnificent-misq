@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-13T14:26:31.239Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-13T14:46:18.888Z"
 last_activity: 2026-03-12 — Roadmap created, ready to begin Phase 1 planning
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  total_plans: 3
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 45 | 3 tasks | 3 files |
+| Phase 02-structure P01 | 3 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Times New Roman with silent Times fallback — MISQ requires TNR but no runtime check; Typst silently uses fallback if TNR unavailable
 - [Phase 01-foundation]: Inline spacing values rather than named constants — values visible at use site, easier to adjust
 - [Phase 01-foundation]: Show rules for single-spacing regions (bibliography/figure/table) instead of wrapper functions
+- [Phase 02-structure]: Used numbering: '1.1' (no trailing dot) to avoid '1.' rendered output at level-1 headings
+- [Phase 02-structure]: counter(heading).display(it.numbering) in all show rules to preserve heading numbers in transformational rules
+- [Phase 02-structure]: bib parameter removed from misq() — authors call bibliography() explicitly for appendix placement control
 
 ### Pending Todos
 
@@ -77,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-13T14:26:31.237Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-structure/02-CONTEXT.md
+Last session: 2026-03-13T14:46:18.886Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None
