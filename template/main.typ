@@ -89,4 +89,4 @@ From a practical standpoint, these results suggest that executives should attend
 
 This appendix provides supplementary documentation of the survey instrument administered at each time point. The survey consisted of 42 items organized into six scales corresponding to the key constructs described in Section 2. All items were measured on a seven-point Likert scale anchored at 1 ("Strongly Disagree") and 7 ("Strongly Agree"). Scale reliability estimates (Cronbach's alpha) exceeded 0.80 for all constructs.
 
-Authors requiring multiple appendices should repeat this pattern with distinct headings—"APPENDIX A," "APPENDIX B," etc.—each preceded by a #pagebreak() call.
+Authors requiring multiple appendices should repeat this pattern with distinct headings ("APPENDIX A," "APPENDIX B," etc.) each preceded by a `#pagebreak()` call.
