@@ -44,13 +44,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Package
 
-- [ ] **PACK-01**: `misq.typ` at project root contains the template definition function
+- [x] **PACK-01**: `misq.typ` at project root contains the template definition function
 - [ ] **PACK-02**: `template/main.typ` is a working example document demonstrating all features
 - [ ] **PACK-03**: `template/references.bib` contains sample references
-- [ ] **PACK-04**: `typst.toml` package manifest with correct metadata
+- [x] **PACK-04**: `typst.toml` package manifest with correct metadata
 - [ ] **PACK-05**: Example document includes sample citations from references.bib
 - [ ] **PACK-06**: Example document includes figure and table examples with captions
-- [ ] **PACK-07**: Template file includes inline comments explaining formatting decisions
+- [x] **PACK-07**: Template file includes inline comments explaining formatting decisions
 
 ### Deployment
 
@@ -102,13 +102,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CITE-01 | Phase 3 | Complete |
 | CITE-02 | Phase 3 | Complete |
 | CITE-03 | Phase 3 | Complete |
-| PACK-01 | Phase 4 | Pending |
+| PACK-01 | Phase 4 | Complete |
 | PACK-02 | Phase 4 | Pending |
 | PACK-03 | Phase 4 | Pending |
-| PACK-04 | Phase 4 | Pending |
+| PACK-04 | Phase 4 | Complete |
 | PACK-05 | Phase 4 | Pending |
 | PACK-06 | Phase 4 | Pending |
-| PACK-07 | Phase 4 | Pending |
+| PACK-07 | Phase 4 | Complete |
 | DEPLOY-01 | Phase 5 | Pending |
 | DEPLOY-02 | Phase 5 | Pending |
 | DEPLOY-03 | Phase 5 | Pending |
