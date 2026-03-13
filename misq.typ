@@ -37,6 +37,11 @@
   // "block": no indent, extra spacing between paragraphs (Word convention)
   // NOTE: set rules must be at show-rule scope to propagate to body content.
   // Using set/show inside an if-block scopes them to that block only.
+  // `all: true` is required so that paragraphs immediately following headings also
+  // receive the first-line indent. Without `all: true`, Typst skips the indent on
+  // the first paragraph after a heading (Typst's default CSS-like behavior), which
+  // does NOT match MISQ's requirement of indenting every paragraph including those
+  // that follow section headings.
   set par(first-line-indent: (amount: if paragraph-style == "indent" { 0.5in } else { 0pt }, all: true))
   set par(spacing: if paragraph-style == "block" { 2.5em } else { 1.85em })
 
@@ -46,7 +51,16 @@
   set bibliography(style: "apa.csl")
 
   // --- Bibliography formatting (TYPO-04, STRC-03) ---
-  // Single-spacing + REFERENCES heading formatting.
+  // Single-spacing + hanging indent + REFERENCES heading formatting.
+  // WHY block-level show rule: The bundled apa.csl has hanging-indent="false" because
+  // CSL hanging-indent="true" blocks Typst's par-level hanging-indent override at
+  // runtime (Typst GitHub issue #2639). To work around this, the CSL ships with
+  // hanging-indent="false" and this show rule applies par(hanging-indent: 0.5in) at
+  // the block level instead. The hanging indent is declared in the par() call below
+  // inside the show rule, scoped only to bibliography content.
+  // WHY single show rule: Multiple transformational show rules for the same element
+  // (bibliography) cause the last rule to overwrite all earlier ones. All bibliography
+  // formatting is combined here in one rule.
   show bibliography: it => {
     set par(leading: 0.65em, spacing: 0.65em)
     // STRC-03: Auto-format heading — centered, bold, uppercase
@@ -62,7 +76,13 @@
   }
 
   // --- Single-spacing for figures and tables (TYPO-05) ---
-  // Captions and figure/table content rendered at single-spacing (same as bibliography)
+  // Captions and figure/table content rendered at single-spacing (same as bibliography).
+  // HOW the scoping works: `show figure: set par(...)` is a set rule attached to a
+  // show rule. The par() settings (leading/spacing) apply only within figure content
+  // (captions and body), not globally to the document. This is distinct from a bare
+  // `set par(...)` which would apply to all subsequent content in scope. The show rule
+  // creates a scoped styling context that reverts to document-level par settings after
+  // the figure closes.
   show figure: set par(leading: 0.65em, spacing: 0.65em)
 
   // --- Heading numbering (HEAD-04) ---
