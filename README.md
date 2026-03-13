@@ -9,7 +9,7 @@ This template reproduces MISQ's formatting requirements in Typst, including Time
 Import the template from Typst Universe:
 
 ```typst
-#import "@preview/misq:0.1.0": misq
+#import "@preview/magnificent-misq:0.1.0": misq
 ```
 
 Set up the document with your manuscript metadata:
