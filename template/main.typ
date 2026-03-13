@@ -90,18 +90,16 @@ The following table tests table single-spacing:
 
 = Discussion
 
-This section contains body text that cites the sample references
-@brown2023fault and @gupta2018economic. The bibliography at the end of this document
-should appear in single-spaced APA format, visually tighter than the body text.
+This section contains body text that cites the sample references.
+@orlikowski1992duality demonstrated the duality of technology in organizations.
+@brown2023fault and @gupta2018economic provide further examples of MISQ research.
 
 The body text in this section continues to be double-spaced, providing a clear
 visual contrast with the single-spaced bibliography that follows.
 
 #pagebreak()
 
-#align(center, text(weight: "bold")[REFERENCES])
-
-#bibliography("references.bib", style: "apa", title: none)
+#bibliography("references.bib", title: "References")
 
 #pagebreak()
 
