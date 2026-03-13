@@ -23,7 +23,7 @@ help: ## Show available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
 thumbnail: ## Generate thumbnail.png from template first page
-	typst compile --format png --ppi 250 --pages 1 template/main.typ thumbnail.png
+	typst compile --format png --ppi 250 --pages 1 --root . template/main.typ thumbnail.png
 	@echo "Generated thumbnail.png"
 	@ls -lh thumbnail.png
 
