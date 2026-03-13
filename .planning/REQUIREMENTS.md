@@ -54,10 +54,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Deployment
 
-- [ ] **DEPLOY-01**: A publish script that copies package files to a local `typst/packages` fork, creates a versioned branch, and commits — ready for a PR
-- [ ] **DEPLOY-02**: The publish script uses sparse checkout to avoid cloning the full `typst/packages` repo
+- [x] **DEPLOY-01**: A publish script that copies package files to a local `typst/packages` fork, creates a versioned branch, and commits — ready for a PR
+- [x] **DEPLOY-02**: The publish script uses sparse checkout to avoid cloning the full `typst/packages` repo
 - [x] **DEPLOY-03**: The publish script is self-contained and copyable into other Typst package projects with minimal config changes
-- [ ] **DEPLOY-04**: A `thumbnail.png` is generated from the template (first page, >= 1080px longer edge, <= 3 MiB)
+- [x] **DEPLOY-04**: A `thumbnail.png` is generated from the template (first page, >= 1080px longer edge, <= 3 MiB)
 
 ## v2 Requirements
 
@@ -109,10 +109,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PACK-05 | Phase 4 | Complete |
 | PACK-06 | Phase 4 | Complete |
 | PACK-07 | Phase 4 | Complete |
-| DEPLOY-01 | Phase 5 | Pending |
-| DEPLOY-02 | Phase 5 | Pending |
+| DEPLOY-01 | Phase 5 | Complete |
+| DEPLOY-02 | Phase 5 | Complete |
 | DEPLOY-03 | Phase 5 | Complete |
-| DEPLOY-04 | Phase 5 | Pending |
+| DEPLOY-04 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 31 total
