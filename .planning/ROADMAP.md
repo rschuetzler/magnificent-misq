@@ -31,19 +31,22 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. References and figure/table regions are single-spaced when the scoped spacing blocks are applied
 **Plans**: 1 plan
 Plans:
-- [ ] 01-01-PLAN.md — Create misq.typ with page geometry, font, spacing; scaffold template directory
+- [x] 01-01-PLAN.md — Create misq.typ with page geometry, font, spacing; scaffold template directory
 
 ### Phase 2: Structure
-**Goal**: Complete document structure — page 1 with bold title, abstract, and keywords; three heading levels correctly styled; Introduction starting on page 2; plain page numbers.
+**Goal**: Complete document structure — page 1 with bold centered title, centered "Abstract" label, and keywords; three numbered heading levels correctly styled; Introduction starting on page 2; plain page numbers. Adds paragraph-style parameter and removes bib parameter.
 **Depends on**: Phase 1
 **Requirements**: HEAD-01, HEAD-02, HEAD-03, HEAD-04, STRC-01, STRC-02, STRC-03, STRC-04, PAGE-03
 **Success Criteria** (what must be TRUE):
-  1. Page 1 shows a bold centered title, 1.5x-spaced abstract with "Abstract" label, and bold "Keywords:" line
+  1. Page 1 shows a bold centered title, 1.5x-spaced abstract with centered "Abstract" label, and bold "Keywords:" line
   2. The Introduction begins at the top of page 2 with no blank page between
-  3. Level 1 headings render centered, uppercase, bold, 12pt; level 2 render centered, bold, 12pt; level 3 render left-aligned, bold, 12pt
-  4. No headings show numbering of any kind
+  3. Level 1 headings render centered, uppercase, bold, 12pt, numbered (1, 2, 3); level 2 render centered, bold, 12pt, numbered (1.1, 1.2); level 3 render left-aligned, bold, 12pt, numbered (1.1.1, 1.1.2)
+  4. All headings use numbered format (1, 1.1, 1.1.1) with no trailing periods
   5. Page numbers appear centered in the footer on every page
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Implement heading rules, title page, page flow, paragraph-style, and bib removal in misq.typ
+- [ ] 02-02-PLAN.md — Update template/main.typ to exercise all features and visual verification
 
 ### Phase 3: Citations
 **Goal**: Working APA 7th citations from a `.bib` file using a bundled CSL, with the references section single-spaced and hanging-indented, output verified against MISQ's sample reference entries.
@@ -86,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 1/1 | Complete   | 2026-03-12 |
-| 2. Structure | 0/TBD | Not started | - |
+| 2. Structure | 0/2 | Planning complete | - |
 | 3. Citations | 0/TBD | Not started | - |
 | 4. Package | 0/TBD | Not started | - |
 | 5. Deployment | 0/TBD | Not started | - |
