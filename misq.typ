@@ -40,10 +40,38 @@
   set par(first-line-indent: (amount: if paragraph-style == "indent" { 0.5in } else { 0pt }, all: true))
   set par(spacing: if paragraph-style == "block" { 2.5em } else { 1.85em })
 
-  // --- Single-spacing for bibliography (TYPO-04) ---
-  // Matches LaTeX \baselinestretch{1.0} for references section
-  // Using 0.65em (Typst default) which produces standard readable single-spacing
-  show bibliography: set par(leading: 0.65em, spacing: 0.65em)
+  // --- Citation style (CITE-03) ---
+  // Auto-apply bundled APA 7th CSL so authors call #bibliography() with no style: needed.
+  // Authors may override: #bibliography("refs.bib", style: "chicago-author-date")
+  // NOTE: new-apa.csl has hanging-indent="false" (modified from original "true")
+  // because CSL hanging-indent blocks Typst par overrides (GitHub issue #2639).
+  set bibliography(style: "new-apa.csl")
+
+  // --- Bibliography formatting (TYPO-04, TYPO-06, STRC-03) ---
+  // Combined show rule: single-spacing + hanging indent + REFERENCES heading.
+  // Must be ONE show bibliography rule — multiple transformational rules overwrite each other.
+  show bibliography: it => {
+    set par(leading: 0.65em, spacing: 0.65em)
+    // STRC-03: Auto-format heading — centered, bold, uppercase
+    show heading: it_h => align(center, block(
+      above: 1.85em,
+      below: 1.85em,
+      {
+        set text(weight: "bold", size: 12pt)
+        upper(it_h.body)
+      }
+    ))
+    // TYPO-06: 0.5-inch hanging indent on each bibliography entry
+    set block(inset: 0pt)
+    show block: it_block => {
+      if it_block.body.func() != [].func() {
+        it_block.body
+      } else {
+        par(first-line-indent: 0in, hanging-indent: 0.5in, it_block.body)
+      }
+    }
+    it
+  }
 
   // --- Single-spacing for figures and tables (TYPO-05) ---
   // Captions and figure/table content rendered at single-spacing (same as bibliography)
