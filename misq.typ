@@ -8,7 +8,7 @@
   title: [Untitled],
   abstract: none,
   keywords: (),
-  bib: none,
+  paragraph-style: "indent",   // "indent" (first-line, no extra spacing) or "block" (no indent, extra spacing)
   body
 ) = {
 
@@ -20,6 +20,7 @@
     paper: "us-letter",
     margin: (x: 1in, top: 1in, bottom: 1in),
     numbering: "1",
+    number-align: center + bottom,  // PAGE-03: centered footer page numbers
   )
 
   // --- Font (TYPO-01) ---
@@ -28,16 +29,20 @@
 
   // --- Body paragraph spacing (TYPO-02) ---
   // Double-spaced: visually equivalent to LaTeX \baselinestretch{2.0}
-  // Typst `leading` is a gap (space between bottom of one line and top of next),
-  // not baseline-to-baseline distance. At 12pt Times New Roman:
-  //   LaTeX 2x: baselineskip = 2 * 14.4pt = 28.8pt → Typst leading = 28.8 - 12 = 16.8pt ≈ 1.4em
-  // Calibrated against LaTeX reference values; both leading (intra-paragraph)
-  // and spacing (inter-paragraph) are set to the same value for uniform double-spacing.
-  set par(justify: true, leading: 1.4em, spacing: 1.4em)
+  // Calibrated empirically in Phase 1: leading = 1.85em, spacing = 1.85em
+  set par(justify: true, leading: 1.85em, spacing: 1.85em)
+
+  // --- Paragraph style toggle ---
+  // "indent": first-line indent (LaTeX convention), no extra between-paragraph spacing
+  // "block": no indent, extra spacing between paragraphs (Word convention)
+  if paragraph-style == "indent" {
+    set par(first-line-indent: (amount: 0.5in, all: false))
+  } else if paragraph-style == "block" {
+    set par(first-line-indent: 0pt, spacing: 2.5em)
+  }
 
   // --- Single-spacing for bibliography (TYPO-04) ---
   // Matches LaTeX \baselinestretch{1.0} for references section
-  // At 12pt Times: LaTeX 1x = 14.4pt → Typst leading = 14.4 - 12 = 2.4pt ≈ 0.2em
   // Using 0.65em (Typst default) which produces standard readable single-spacing
   show bibliography: set par(leading: 0.65em, spacing: 0.65em)
 
@@ -45,15 +50,25 @@
   // Captions and figure/table content rendered at single-spacing (same as bibliography)
   show figure: set par(leading: 0.65em, spacing: 0.65em)
 
+  // --- Heading numbering (HEAD-04) ---
+  // Hierarchical numbering pattern: "1", "1.1", "1.1.1"
+  // "1.1." produces correct output at all levels without trailing period on display
+  set heading(numbering: "1.1.")
+
+  // --- Front matter: title page (STRC-01) ---
+  // Title: bold and centered, original author casing (no auto-uppercase)
+  align(center, text(weight: "bold", title))
+  v(1em)
+
   // --- Front matter: abstract (TYPO-03) ---
   if abstract != none {
-    text(weight: "bold")[Abstract]
+    // Abstract label: centered and bold (updated from Phase 1's left-aligned)
+    align(center, text(weight: "bold")[Abstract])
     linebreak()
-    // 1.5x spacing: visually equivalent to LaTeX \baselinestretch{1.5}
-    // At 12pt Times: LaTeX 1.5x = 1.5 * 14.4pt = 21.6pt → Typst leading = 21.6 - 12 = 9.6pt ≈ 0.8em
+    // 1.5x spacing: calibrated in Phase 1 at 0.9em leading/spacing
     // Scoped to abstract block only; body spacing is restored after this block
     block({
-      set par(leading: 0.8em, spacing: 0.8em)
+      set par(leading: 0.9em, spacing: 0.9em)
       abstract
     })
     parbreak()
@@ -69,11 +84,11 @@
     parbreak()
   }
 
+  // --- Page break (STRC-02) ---
+  // Force Introduction to start at top of page 2
+  // weak: true avoids blank page if the page is already empty
+  pagebreak(weak: true)
+
   // --- Body content ---
   body
-
-  // --- Bibliography ---
-  if bib != none {
-    bibliography(bib, style: "apa")
-  }
 }

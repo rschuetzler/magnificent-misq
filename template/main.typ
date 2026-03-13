@@ -1,5 +1,6 @@
-// template/main.typ — Minimal test document for misq.typ
-// Exercises all spacing regions: body (2x), abstract (1.5x), references/figures/tables (1x)
+// template/main.typ — Test document for misq.typ
+// Exercises: title page, abstract, keywords, page break, heading levels, body spacing,
+//            figures, tables, bibliography, paragraph-style indent mode
 
 #import "../misq.typ": misq
 
@@ -13,7 +14,7 @@
     so that the line spacing can be clearly evaluated.
   ],
   keywords: ("information systems", "template", "typst", "formatting"),
-  bib: "template/references.bib",
+  paragraph-style: "indent",
 )
 
 = Introduction
@@ -31,6 +32,17 @@ A third paragraph is included here to provide additional comparison material for
 evaluating the line spacing calibration. The spacing between lines within this
 paragraph (leading) and between this paragraph and the previous one (spacing) should
 both appear consistent with standard double-spacing.
+
+== Background and Motivation
+
+This is a level 2 heading (centered, bold, numbered 1.1). The body text continues
+with standard double-spacing. This subsection demonstrates the second-level heading
+style which should be centered and bold, matching the MISQ style guide.
+
+=== Prior Work
+
+This is a level 3 heading (left-aligned, bold, numbered 1.1.1). Level 3 headings
+follow left alignment. This subsubsection demonstrates the third-level heading style.
 
 = Sample Figure
 
@@ -71,3 +83,9 @@ should appear in single-spaced APA format, visually tighter than the body text.
 
 The body text in this section continues to be double-spaced, providing a clear
 visual contrast with the single-spaced bibliography that follows.
+
+#pagebreak()
+
+#align(center, text(weight: "bold")[REFERENCES])
+
+#bibliography("references.bib", style: "apa", title: none)
