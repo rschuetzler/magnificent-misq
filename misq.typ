@@ -43,13 +43,10 @@
   // --- Citation style (CITE-03) ---
   // Auto-apply bundled APA 7th CSL so authors call #bibliography() with no style: needed.
   // Authors may override: #bibliography("refs.bib", style: "chicago-author-date")
-  // NOTE: apa.csl has hanging-indent="false" (modified from upstream "true")
-  // because CSL hanging-indent blocks Typst par overrides (GitHub issue #2639).
   set bibliography(style: "apa.csl")
 
-  // --- Bibliography formatting (TYPO-04, TYPO-06, STRC-03) ---
-  // Combined show rule: single-spacing + hanging indent + REFERENCES heading.
-  // Must be ONE show bibliography rule — multiple transformational rules overwrite each other.
+  // --- Bibliography formatting (TYPO-04, STRC-03) ---
+  // Single-spacing + REFERENCES heading formatting.
   show bibliography: it => {
     set par(leading: 0.65em, spacing: 0.65em)
     // STRC-03: Auto-format heading — centered, bold, uppercase
@@ -61,15 +58,6 @@
         upper(it_h.body)
       }
     ))
-    // TYPO-06: 0.5-inch hanging indent on each bibliography entry
-    set block(inset: 0pt)
-    show block: it_block => {
-      if it_block.body.func() != [].func() {
-        it_block.body
-      } else {
-        par(first-line-indent: 0in, hanging-indent: 0.5in, it_block.body)
-      }
-    }
     it
   }
 
