@@ -1,5 +1,5 @@
 [package]
-name = "misq"
+name = "magnificent-misq"
 version = "0.1.0"
 entrypoint = "misq.typ"
 authors = ["Ryan Schuetzler <ryan.schuetzler@byu.edu>"]

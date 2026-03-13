@@ -4,7 +4,7 @@ SHELL := /bin/bash
 # ============================================================
 # Configuration — change these lines for another project
 # ============================================================
-PKG_NAME    := misq
+PKG_NAME    := magnificent-misq
 GITHUB_USER := rschuetzler
 FORK_REPO   := https://github.com/$(GITHUB_USER)/typst-packages.git
 
