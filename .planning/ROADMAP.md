@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Structure** - Title page, heading styles, and page flow
 - [ ] **Phase 3: Citations** - APA 7th bibliography from .bib file
 - [x] **Phase 4: Package** - Sample document, manifest, and release artifacts (completed 2026-03-13)
-- [ ] **Phase 5: Deployment** - Publish script for Typst Universe submission
+- [x] **Phase 5: Deployment** - Publish script for Typst Universe submission (completed 2026-03-13)
 
 ## Phase Details
 
@@ -101,4 +101,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Structure | 2/2 | Complete   | 2026-03-13 |
 | 3. Citations | 0/1 | Not started | - |
 | 4. Package | 3/3 | Complete   | 2026-03-13 |
-| 5. Deployment | 1/2 | In Progress|  |
+| 5. Deployment | 2/2 | Complete   | 2026-03-13 |
