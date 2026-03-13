@@ -24,10 +24,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Headings
 
-- [x] **HEAD-01**: Level 1 headings are centered, uppercase, bold, unnumbered, normalsize (12pt)
-- [x] **HEAD-02**: Level 2 headings are centered, bold, unnumbered, normalsize (12pt)
-- [x] **HEAD-03**: Level 3 headings are left-aligned, bold, unnumbered, normalsize (12pt)
-- [x] **HEAD-04**: All headings use no numbering
+- [x] **HEAD-01**: Level 1 headings are centered, uppercase, bold, numbered (1, 2, 3), normalsize (12pt)
+- [x] **HEAD-02**: Level 2 headings are centered, bold, numbered (1.1, 1.2), normalsize (12pt)
+- [x] **HEAD-03**: Level 3 headings are left-aligned, bold, numbered (1.1.1, 1.1.2), normalsize (12pt)
+- [x] **HEAD-04**: All headings use hierarchical numbering (1, 1.1, 1.1.1)
 
 ### Document Structure
 

@@ -123,11 +123,14 @@
 
   // --- Front matter: keywords ---
   if keywords.len() > 0 {
-    text(weight: "bold")[Keywords: ]
-    for (i, k) in keywords.enumerate() {
-      k
-      if i < keywords.len() - 1 { [, ] }
-    }
+    block({
+      set par(first-line-indent: 0pt)
+      text(weight: "bold")[Keywords: ]
+      for (i, k) in keywords.enumerate() {
+        k
+        if i < keywords.len() - 1 { [, ] }
+      }
+    })
     parbreak()
   }
 
