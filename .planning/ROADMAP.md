@@ -85,7 +85,10 @@ Plans:
   2. The script uses sparse checkout (not a full clone of the massive typst/packages repo)
   3. A `thumbnail.png` exists at the project root, generated from the first page of the template at >= 1080px
   4. The script is portable — changing the package name and username at the top is sufficient to reuse it in another Typst project
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — Create README.md and LICENSE prerequisites for package submission
+- [ ] 05-02-PLAN.md — Create Makefile with publish automation and generate thumbnail
 
 ## Progress
 
@@ -98,4 +101,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Structure | 2/2 | Complete   | 2026-03-13 |
 | 3. Citations | 0/1 | Not started | - |
 | 4. Package | 3/3 | Complete   | 2026-03-13 |
-| 5. Deployment | 0/TBD | Not started | - |
+| 5. Deployment | 0/2 | Not started | - |
