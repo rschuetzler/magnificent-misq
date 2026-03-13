@@ -51,13 +51,14 @@
   set bibliography(style: "apa.csl")
 
   // --- Bibliography formatting (TYPO-04, STRC-03) ---
-  // Single-spacing + hanging indent + REFERENCES heading formatting.
-  // WHY block-level show rule: The bundled apa.csl has hanging-indent="false" because
-  // CSL hanging-indent="true" blocks Typst's par-level hanging-indent override at
-  // runtime (Typst GitHub issue #2639). To work around this, the CSL ships with
-  // hanging-indent="false" and this show rule applies par(hanging-indent: 0.5in) at
-  // the block level instead. The hanging indent is declared in the par() call below
-  // inside the show rule, scoped only to bibliography content.
+  // Single-spacing + REFERENCES heading formatting.
+  // HOW hanging indent works: The bundled apa.csl is an unmodified upstream APA 7th
+  // edition CSL file. It has hanging-indent="true", which means the CSL itself delivers
+  // the 0.5-inch hanging indent natively. No Typst-level hanging-indent code is needed.
+  // WHAT this show rule does: The show rule handles only two concerns:
+  //   1. Single-spacing — overrides document-level double-spacing for bibliography
+  //      entries via par(leading: 0.65em, spacing: 0.65em).
+  //   2. REFERENCES heading formatting (STRC-03) — centered, bold, uppercase.
   // WHY single show rule: Multiple transformational show rules for the same element
   // (bibliography) cause the last rule to overwrite all earlier ones. All bibliography
   // formatting is combined here in one rule.
