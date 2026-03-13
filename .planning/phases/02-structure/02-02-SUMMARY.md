@@ -141,3 +141,11 @@ None — no external services or configuration required.
 ---
 *Phase: 02-structure*
 *Completed: 2026-03-13*
+
+## Self-Check: PASSED
+
+- FOUND: misq.typ
+- FOUND: template/main.typ
+- FOUND: .planning/phases/02-structure/02-02-SUMMARY.md
+- FOUND commit: 4e5cb52 (Task 1)
+- FOUND commit: 9b03bc6 (fix — misq.typ bugs post-checkpoint)
