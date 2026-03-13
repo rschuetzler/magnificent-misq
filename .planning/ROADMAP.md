@@ -56,7 +56,9 @@ Plans:
   1. In-text `@key` citations render in APA 7th format for 1-author, 2-author, and 3+-author (et al.) cases
   2. The bibliography renders from a `.bib` file with APA 7th formatting that matches MISQ's sample reference entries
   3. The references section text is single-spaced with a 0.5-inch left hanging indent on each entry
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Bundle CSL, add bibliography show rules, update template citations
 
 ### Phase 4: Package
 **Goal**: A complete, distributable Typst package — `misq.typ` at root, `template/main.typ` demonstrating all features, `template/references.bib` with sample entries, `typst.toml` manifest, and inline comments explaining formatting decisions.
@@ -89,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 1/1 | Complete   | 2026-03-12 |
-| 2. Structure | 1/2 | In Progress|  |
-| 3. Citations | 0/TBD | Not started | - |
+| 2. Structure | 2/2 | Complete   | 2026-03-13 |
+| 3. Citations | 0/1 | Not started | - |
 | 4. Package | 0/TBD | Not started | - |
 | 5. Deployment | 0/TBD | Not started | - |
