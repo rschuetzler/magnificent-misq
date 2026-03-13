@@ -33,8 +33,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **STRC-01**: Page 1 contains bold centered title, abstract (with label), and keywords
 - [x] **STRC-02**: Introduction begins on page 2 (explicit page break after title page)
-- [ ] **STRC-03**: References section uses centered uppercase "REFERENCES" heading
-- [ ] **STRC-04**: Appendix section support with page break and centered uppercase "APPENDIX" heading
+- [x] **STRC-03**: References section uses centered uppercase "REFERENCES" heading
+- [x] **STRC-04**: Appendix section support with page break and centered uppercase "APPENDIX" heading
 
 ### Citations
 
@@ -97,8 +97,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HEAD-04 | Phase 2 | Complete |
 | STRC-01 | Phase 2 | Complete |
 | STRC-02 | Phase 2 | Complete |
-| STRC-03 | Phase 2 | Pending |
-| STRC-04 | Phase 2 | Pending |
+| STRC-03 | Phase 2 | Complete |
+| STRC-04 | Phase 2 | Complete |
 | CITE-01 | Phase 3 | Pending |
 | CITE-02 | Phase 3 | Pending |
 | CITE-03 | Phase 3 | Pending |
