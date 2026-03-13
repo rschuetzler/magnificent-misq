@@ -35,11 +35,10 @@
   // --- Paragraph style toggle ---
   // "indent": first-line indent (LaTeX convention), no extra between-paragraph spacing
   // "block": no indent, extra spacing between paragraphs (Word convention)
-  if paragraph-style == "indent" {
-    set par(first-line-indent: (amount: 0.5in, all: false))
-  } else if paragraph-style == "block" {
-    set par(first-line-indent: 0pt, spacing: 2.5em)
-  }
+  // NOTE: set rules must be at show-rule scope to propagate to body content.
+  // Using set/show inside an if-block scopes them to that block only.
+  set par(first-line-indent: (amount: if paragraph-style == "indent" { 0.5in } else { 0pt }, all: true))
+  set par(spacing: if paragraph-style == "block" { 2.5em } else { 1.85em })
 
   // --- Single-spacing for bibliography (TYPO-04) ---
   // Matches LaTeX \baselinestretch{1.0} for references section
@@ -62,45 +61,42 @@
   // See RESEARCH.md Pitfall 1.
 
   // Level 1: centered, uppercase, bold, 12pt, numbered (1, 2, 3, ...)
-  show heading.where(level: 1): it => block(
+  show heading.where(level: 1): it => align(center, block(
     above: 1.4em,
     below: 0.8em,
     {
-      set align(center)
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
         counter(heading).display(it.numbering)
-        [ ]
+        h(0.5em)
       }
       upper(it.body)
     }
-  )
+  ))
 
   // Level 2: centered, bold, 12pt, numbered (1.1, 1.2, ...) — no uppercase
-  show heading.where(level: 2): it => block(
+  show heading.where(level: 2): it => align(center, block(
     above: 1.4em,
     below: 0.8em,
     {
-      set align(center)
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
         counter(heading).display(it.numbering)
-        [ ]
+        h(0.5em)
       }
       it.body
     }
-  )
+  ))
 
   // Level 3: left-aligned, bold, 12pt, numbered (1.1.1, 1.1.2, ...)
   show heading.where(level: 3): it => block(
     above: 1.4em,
     below: 0.8em,
     {
-      set align(left)
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
         counter(heading).display(it.numbering)
-        [ ]
+        h(0.5em)
       }
       it.body
     }
