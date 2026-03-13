@@ -62,8 +62,8 @@
 
   // Level 1: centered, uppercase, bold, 12pt, numbered (1, 2, 3, ...)
   show heading.where(level: 1): it => align(center, block(
-    above: 1.4em,
-    below: 0.8em,
+    above: 1.85em,
+    below: 1.85em,
     {
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
@@ -76,8 +76,8 @@
 
   // Level 2: centered, bold, 12pt, numbered (1.1, 1.2, ...) — no uppercase
   show heading.where(level: 2): it => align(center, block(
-    above: 1.4em,
-    below: 0.8em,
+    above: 1.85em,
+    below: 1.85em,
     {
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
@@ -90,8 +90,8 @@
 
   // Level 3: left-aligned, bold, 12pt, numbered (1.1.1, 1.1.2, ...)
   show heading.where(level: 3): it => block(
-    above: 1.4em,
-    below: 0.8em,
+    above: 1.85em,
+    below: 1.85em,
     {
       set text(weight: "bold", size: 12pt)
       if it.numbering != none {
