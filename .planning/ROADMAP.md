@@ -70,7 +70,10 @@ Plans:
   3. The sample document includes an appendix section that renders with the correct heading and page break
   4. `typst.toml` exists at the root with correct package metadata
   5. `misq.typ` includes inline comments explaining key formatting decisions (spacing values, heading rules, font fallbacks)
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 04-01-PLAN.md — Create typst.toml manifest and audit/enhance misq.typ inline comments
+- [ ] 04-02-PLAN.md — Expand template/main.typ to production-quality example and enrich references.bib
 
 ### Phase 5: Deployment
 **Goal**: A self-contained publish script that packages the template for Typst Universe submission — sparse-clones a `typst/packages` fork, copies versioned files into the correct directory structure, generates a thumbnail, and commits on a release branch ready for a PR. The script should be easily copyable into other Typst package projects.
@@ -93,5 +96,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 1/1 | Complete   | 2026-03-12 |
 | 2. Structure | 2/2 | Complete   | 2026-03-13 |
 | 3. Citations | 0/1 | Not started | - |
-| 4. Package | 0/TBD | Not started | - |
+| 4. Package | 0/2 | Not started | - |
 | 5. Deployment | 0/TBD | Not started | - |
