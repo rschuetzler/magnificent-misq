@@ -1,36 +1,33 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
-status: planning
-stopped_at: Completed 05-03-PLAN.md — package name consistency fix complete
-last_updated: "2026-03-13T21:08:59.731Z"
-last_activity: 2026-03-12 — Roadmap created, ready to begin Phase 1 planning
+milestone_name: MVP
+status: complete
+stopped_at: v1.0 milestone complete — archived and tagged
+last_updated: "2026-03-13"
+last_activity: 2026-03-13 — v1.0 MVP shipped, all 5 phases complete
 progress:
   total_phases: 5
   completed_phases: 5
   total_plans: 10
   completed_plans: 10
-  percent: 0
+  percent: 100
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-12)
+See: .planning/PROJECT.md (updated 2026-03-13)
 
 **Core value:** Accurately reproduce MISQ's formatting requirements in Typst so authors can write and submit manuscripts without wrestling with LaTeX.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Planning next milestone — use `/gsd:new-milestone`
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-12 — Roadmap created, ready to begin Phase 1 planning
+v1.0 MVP shipped. All 5 phases, 10 plans complete.
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
